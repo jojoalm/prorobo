@@ -62,7 +62,7 @@ if (!(APP_SECRET && VALIDATION_TOKEN && PAGE_ACCESS_TOKEN && SERVER_URL)) {
  *
  */
 app.get('/webhook', function(req, res) {
-  if (req.query['hub.mode'] === 'soujojo' &&
+  if (req.query['hub.mode'] === 'EAABiaQMbUuUBAAVWqOecU9VAhYyKcspShiyET7qXrdLFfQvUySvJm6oPtXyOTCjWsXizYfGrFlrjJRiXp8ZAAuwm6AQdc7FPeShbju99pbGEbU4FCkKvZCZA7ZCAMvZCVp9LuPBYWbZBmifIe7Kyhrqqh5gEyT1NCZB4wLICNvsagZDZD' &&
       req.query['hub.verify_token'] === VALIDATION_TOKEN) {
     console.log("Validating webhook");
     res.status(200).send(req.query['hub.challenge']);
