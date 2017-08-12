@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 // Webhook validation
-app.get('/webhook', function(req, res) {
+app.get('/prorobo', function(req, res) {
   if (req.query['hub.mode'] === 'subscribe' &&
       req.query['hub.verify_token'] === process.env.VERIFY_TOKEN) {
     console.log("Validating webhook");
